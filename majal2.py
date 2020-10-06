@@ -80,12 +80,14 @@ def getCamino ( ini , Cerrados ) :
 
  ## Esto es la funcion principal
 def main(ini,meta) :
-    proble ={ 'A':{ 'B':5 , 'C':4.2 , 'D':5.6} ,
-    'B':{ 'A':5 , 'C':4.5 , 'E':9.2} ,
-    'C':{ 'A':4.2 , 'B':4.5 , 'D':2.7 , 'E':9.4} ,
-    'D':{ 'A':5.6 , 'C':2.7 , 'F':12.2} ,
-    'E':{ 'B':9.2 , 'C':9.4 , 'F':8.3} ,
-    'F':{ 'D':12.2 , 'E':8.3}}
+    proble ={ 
+    'A':{ 'B':5 , 'C':8, 'D':7,'E':13,'F':32,'G':18} ,
+    'B':{ 'A':5 , 'C':9 , 'D':14,'E':8,'F':35,'G':19} ,
+    'C':{ 'A':8 , 'B':9 , 'D':6 , 'E':7,'F':26,'G':8},
+    'D':{ 'A':7 ,'B':14, 'C':6 ,'E':16, 'F':27,'G':12} ,
+    'E':{ 'A':13,'B':8 , 'C':7 , 'D':16,'F':35,'G':15} ,
+    'F':{ 'A':32,'B':35,'C':26,'D':27 , 'E':35,'G':35},
+    'G':{ 'A':18,'B':19,'C':8,'D':12,'E':15,'F':15}}
     cerrados = primMej ( ini , meta , proble )
     camino = getCamino ( ini , cerrados )
     print ('Solucion prmero por lo mejor: ')
