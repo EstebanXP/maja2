@@ -45,8 +45,8 @@ def siguiente ( Abiertos ) :
             mejor = nodo
             donde = cuenta
         cuenta = cuenta +1
-        del Abiertos [ donde ]
-        return Abiertos , mejor
+    del Abiertos [ donde ]
+    return Abiertos , mejor
 
 def primMej ( ini , meta , proble ) :
     Abiertos =[ Edo ( ini , ini ,0) ]
@@ -81,13 +81,14 @@ def getCamino ( ini , Cerrados ) :
  ## Esto es la funcion principal
 def main(ini,meta) :
     proble ={ 
-    'A':{ 'B':5 , 'C':8, 'D':7,'E':13,'F':32,'G':18} ,
-    'B':{ 'A':5 , 'C':9 , 'D':14,'E':8,'F':35,'G':19} ,
-    'C':{ 'A':8 , 'B':9 , 'D':6 , 'E':7,'F':26,'G':8},
-    'D':{ 'A':7 ,'B':14, 'C':6 ,'E':16, 'F':27,'G':12} ,
-    'E':{ 'A':13,'B':8 , 'C':7 , 'D':16,'F':35,'G':15} ,
-    'F':{ 'A':32,'B':35,'C':26,'D':27 , 'E':35,'G':35},
-    'G':{ 'A':18,'B':19,'C':8,'D':12,'E':15,'F':15}}
+        'A':{ 'B':5 , 'C':8, 'D':7,'E':13,'F':32,'G':18} ,
+        'B':{ 'A':5 , 'C':9 , 'D':14,'E':8,'F':35,'G':19} ,
+        'C':{ 'A':8 , 'B':9 , 'D':6 , 'E':7,'F':26,'G':8},
+        'D':{ 'A':7 ,'B':14, 'C':6 ,'E':16, 'F':27,'G':12} ,
+        'E':{ 'A':13,'B':8 , 'C':7 , 'D':16,'F':35,'G':15} ,
+        'F':{ 'A':32,'B':35,'C':26,'D':27 , 'E':35,'G':15},
+        'G':{ 'A':18,'B':19,'C':8,'D':12,'E':15,'F':15}
+    }
     cerrados = primMej ( ini , meta , proble )
     camino = getCamino ( ini , cerrados )
     print ('Solucion prmero por lo mejor: ')
