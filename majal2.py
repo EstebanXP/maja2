@@ -95,4 +95,7 @@ def main(ini,meta) :
     print ( camino )
 
 if __name__ == '__main__':
-    main ('A','F')
+
+    n1=input("Ingresa el estado inicial: ")
+    n2=input("Ingrese el estado final: ")
+    main (n1,n2)
